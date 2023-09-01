@@ -1,0 +1,25 @@
+OpenAI response for Prompt: write a neural network example using Python using artificial intelligence 
+ *************************
+
+
+
+import numpy as np
+from sklearn.neural_network import MLPClassifier
+
+# Input data
+X = np.array([[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]])
+
+# Output data
+y = np.array([[0, 1, 1, 0]]).T
+
+# Initialize the neural network classifier
+clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(4, 2), random_state=1)
+
+# Train the neural network classifier
+clf.fit(X, y)
+
+# Make predictions on the test data
+predictions = clf.predict(X)
+
+# Print out the predictions
+print(predictions)
